@@ -1,0 +1,31 @@
+{
+  "name": "forecast.io-bluebird",
+  "version": "0.0.1",
+  "description": "Lightweight wrapper for Forecast.IO weather API that returns Bluebird promises.",
+  "main": "forecast.js",
+  "keywords": [
+    "bluebird",
+    "dark sky",
+    "forecast",
+    "forecast.io",
+    "weather"
+  ],
+  "contributors": [{
+    "name": "Peter Hanneman",
+    "email": "peter.a.hanneman@gmail.com",
+    "url": "https://github.com/timelessvirtues"
+  }],
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.9.27"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timelessvirtues/forecast.io-bluebird"
+  },
+  "bugs": {
+    "url": "https://github.com/timelessvirtues/forecast.io-bluebird/issues",
+    "email": "peter.a.hanneman@gmail.com"
+  },
+  "readmeFilename": "README.md"
+}
