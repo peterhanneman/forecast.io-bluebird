@@ -19,7 +19,7 @@ Forecast.prototype.fetch = function(latitude, longitude, time, options) {
     if (typeof(time) === 'number') {
         path += ',' + time.toString().substr(0, 10);
     } else if (typeof(time) === 'object') {
-        options = time;
+        path += ',' + time.getTime().toString().substr(0, 10);
     }
 
     if (typeof(options) === 'object') {
