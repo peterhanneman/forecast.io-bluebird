@@ -6,6 +6,7 @@ var version = require('./package').version;
 
 var Forecast = function(options) {
     if (!options || !options.key) throw new Error('Dark Sky API key must be specified! Get one from "https://developer.forecast.io/".');
+    if (typeof options.key !== 'string') throw new Error('API key must be a string');
     this.key = options.key;
     this.timeout = options.timeout || 2000;
 };
