@@ -17,10 +17,13 @@ Forecast.prototype.fetch = function(latitude, longitude, time, options) {
 
     var path = '/forecast/' + this.key + '/' + latitude + ',' + longitude;
 
-    if (typeof(time) === 'number') {
-        path += ',' + time.toString().substr(0, 10);
-    } else if (typeof(time) === 'object') {
-        options = time;
+    if (time) {
+        var d = new Date(time);
+        if ( isNaN( d.getTime() ) ) {
+            options = time;
+        } else {
+            path += ',' + Math.round( d.getTime()/1000 ); 
+        }
     }
 
     if (typeof(options) === 'object') {
